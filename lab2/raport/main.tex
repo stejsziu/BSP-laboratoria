@@ -1,0 +1,73 @@
+\documentclass[theme = light]{sprawozdanie}
+\usepackage{lipsum}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{placeins} % gives \FloatBarrier
+\usepackage{hyperref}
+\usepackage{booktabs}
+% Beamer presentation requires 
+%\usepackage{colortbl}
+
+
+% ****************************************
+%
+    %TITLE PAGE
+%\title{Termometr w dupie twoje starej}
+\title{Wyznaczenie współczynnika siły \\[1mm] nośnej płata skośnego}
+\class{Sprawozdanie z Laboratorium}
+\author{ }
+\deadline{28.10.2026}
+\instructor{mgr inż. Konrad Gumowski}
+%\instructor{dr inż. Tomasz Karolak}
+%
+%
+%
+    % MAIN
+% ========================================
+\begin{document}
+\maketitle
+%
+
+\title{Wyznaczanie współczynnika siły nośnej płata skośnego }
+\class{Bezzałogowe statki powietrzne}
+%
+% ----------------------------------------
+%
+    %SPIS TREŚCI
+\tableofcontents\hfill\vfill
+% ----------------------------------------
+%
+%% ZALADOWANIE FUNKCJI!!!!
+\input{functions}
+
+% ----------------------------------------
+%
+\vfill
+
+%
+%
+\newpage
+% ------------
+\section{Cel}
+    \input{rozdzialy/1.Cel}
+% ------------
+\section{Podstawy teoretyczne}
+    \input{rozdzialy/2.Podstawy_Teoretyczne}
+% ------------
+\section{Stanowisko pomiarowe}
+    \input{rozdzialy/3.stanowisko}
+% ------------
+\section{Przebieg ćwiczenia}
+    \input{rozdzialy/4.Przebieg_ćwiczenia}
+% ------------
+\newpage
+\section{Wyniki}
+    \input{rozdzialy/5.Wyniki}
+% ------------
+\section{Wnioski}
+    \input{rozdzialy/6.Wnioski}
+%
+
+\end{document}
+

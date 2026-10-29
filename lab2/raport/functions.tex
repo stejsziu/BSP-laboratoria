@@ -1,0 +1,97 @@
+% ===================================
+% DŁUGOSCI DO JEDNEGO WYKRESY
+
+\newlength{\singlePlotWidth}
+\setlength{\singlePlotWidth}{\textwidth}
+
+\newlength{\singleScreenshotWidth}
+\setlength{\singleScreenshotWidth}{0.8\textwidth}
+
+\newlength{\singlePhotoWidth}
+\setlength{\singlePhotoWidth}{0.6\textwidth}
+
+\newcommand{\newPlot}[3]{ 
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width = \singlePlotWidth]{wykresy/#1}
+        \caption{#2}
+        \label{fig:#3}
+    \end{figure}
+} 
+
+\newcommand{\newScreenshot}[3]{ 
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width = \singlePlotWidth]{screenshots/#1}
+        \caption{#2}
+        \label{fig:#3}
+    \end{figure}
+} 
+
+\newcommand{\newPhoto}[4]{ 
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width = #2]{zdjecia/#1}
+        \caption{#3}
+        \label{fig:#4}
+    \end{figure}
+} 
+
+% #1 -> sciezka do obrazka
+% #2 -> caption text
+
+%\newcommand{\plot}[2]{
+%    \begin{center}
+%        \includegraphics[width=\singlePlotWidth]{#1}
+%        \captionof{figure}{#2}
+%    \end{center}
+%}
+
+\NewDocumentCommand{\plot}{m O{} O{\singlePlotWidth}}{%
+  \begin{center}
+    \includegraphics[width=#3]{#1}%
+    \IfNoValueF{#2}{\captionof{figure}{#2}}%
+  \end{center}%
+}
+
+
+
+% ===================================
+% tabto skrotowo
+
+\newcommand{\akapit}[0]{
+\tabto{0.7cm}
+}
+
+
+
+% ====================================
+% DŁUGOSCI DO OBRAZEK + TEKST W LINII
+\newlength{\imagePageWidth}
+\setlength{\imagePageWidth}{0.55\textwidth}
+
+\newlength{\imageWidth}
+\setlength{\imageWidth}{0.95\imagePageWidth}
+
+\newlength{\myMargin}
+\setlength{\myMargin}{0.025\textwidth}  % half of 0.05\textwidth
+
+
+% Tworzy obrazek i obok daje tekst
+% #1 -> sciezka obrazka
+% #2 -> caption tekst
+% #3 -> opis obok
+\newcommand{\obrazTekst}[3]{
+  \noindent
+  \begin{minipage}[t]{\dimexpr\imagePageWidth - \myMargin\relax}
+    \vspace{0pt}
+    \centering
+    \includegraphics[width=\imageWidth]{#1}
+    \captionof{figure}{#2}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{\dimexpr\textwidth - \imagePageWidth - \myMargin\relax}
+    \vspace{0pt}
+    #3
+  \end{minipage}
+}
