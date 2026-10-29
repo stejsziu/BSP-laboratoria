@@ -1,10 +1,19 @@
-.zed
-.json
+# Zed
 .zed/
-.aux
-.fdb_latexmk
-.fls
-.log
-.out
-.toc
-.synctex.gz
+
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Bibliography (only if you use biber/bibtex)
+*.bbl
+*.blg
+*.bcf
+*.run.xml
