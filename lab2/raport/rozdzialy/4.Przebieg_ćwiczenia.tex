@@ -1,1 +1,29 @@
-\akapit x
+\akapit Pomiary podzielono na 3 etapy.
+
+\begin{enumerate}
+    \item Pomiar parametrów przy wyłączonym tunelu aerodynamicznym i z nominalnym napięciem zasilania silnika
+    \item Pomiar parametrów przy włączonym tunelu i z nominalnym napięciem zasilającym
+    \item Pomiar parametrów przy wyłączonym tunelu z obniżonym napięciem zasilającym silnik (symulacja rozładowanej baterii)
+\end{enumerate}
+
+\akapit W obrębie pomiaru dla jednych warunków dokonywano następujące czynności:
+
+\begin{enumerate}
+    \item Zadanie odpowiednich wielkości parametrów:
+    \begin{itemize}
+        \item  Napięcie zasilania $U_{zaś}$ sterownika zespołu napędowego przy pomocy zasilacza laboratoryjnego
+        \item Wysterowanie PWM sterownika zespołu napędowego przy pomocy odpowiedniego zadajnika
+        \item Nastawa pracy tunelu aerodynamicznego\footnote{tyko dla drugiego etapu pomiarów}
+    \end{itemize}
+    \item Odczytanie i zapis wartości mierzonych
+    \begin{itemize}
+        \item Prąd pobierany $I_{zaś}$ przez zespół napędowy odczytywany z zasilacza laboratoryjnego
+        \item Prędkość obrotowa odczytywana z oscyloskopu dzięki układowi czujnika odbiciowego dającego sygnał prostokątny
+        \item Siła $T$ tzw. siła ciągu, mierzona przez belkę tensometryczną wraz z mostkiem pomiarowy National Instruments odczytywana za pośrednictwem programu przygotowanego w środowisku LabView
+        \item Moment oporowy $M_{opor}$ jako reakcja od momentu obrotowego zespołu napędowego mierzony przez belkę tensometryczną wraz z mostkiem pomiarowy National Instruments odczytywana za pośrednictwem programu przygotowanego w środowisku LabView.
+        \item Ciśnienie dynamiczne q strumienia powietrza za śmigłem mierzony przez czujnik HSC Honeywell podłączony do mikrokontrolera integrowanego przez Arduino odczytywane za pośrednictwem programu przygotowanego w środowisku LabView.
+        \item Ciśnienie dynamiczne $q_{tun}$ i temperatura t powietrza napływającego w przestrzeni pomiarowej tunelu aerodynamicznego odczytywane ze wskaźnika będącego wyposażeniem tunelu aerodynamicznego.
+    \end{itemize}
+\end{enumerate}
+
+\akapit Na koniec dokonano obliczeń zgodnie z wzorami przedstawionymi w sekcji \textbf{\ref{sec:podstawy}.Podstawy teoretyczne} oraz przedstawiono otrzymane charakterystyki w sekcji \textbf{\ref{sec:wyniki}.Wyniki}
