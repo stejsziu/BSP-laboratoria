@@ -1,0 +1,71 @@
+\documentclass[theme = light]{sprawozdanie}
+\usepackage{lipsum}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{placeins} % gives \FloatBarrier
+\usepackage{hyperref}
+\usepackage{booktabs}
+% Beamer presentation requires
+%\usepackage{colortbl}
+
+
+% ****************************************
+%
+    %TITLE PAGE
+%\title{Termometr w dupie twoje starej}
+\title{Badanie właściwości systemu sterowania samolotu bezzałogowego}
+\class{Sprawozdanie z Laboratorium}
+\author{ }
+\deadline{11.11.2026}
+\instructor{dr inż. Antoni Kopyt}
+%\instructor{dr inż. Tomasz Karolak}
+%
+%
+%
+    % MAIN
+% ========================================
+\begin{document}
+\maketitle
+%
+\title{Badanie właściwości systemu sterowania samolotu bezzałogowego}
+\class{Bezzałogowe statki powietrzne}
+%
+% ----------------------------------------
+%
+    %SPIS TREŚCI
+\tableofcontents\hfill\vfill
+% ----------------------------------------
+%
+%% ZALADOWANIE FUNKCJI!!!!
+\input{functions}
+
+% ----------------------------------------
+%
+\vfill
+
+%
+%
+\newpage
+% ------------
+\section{Cel ćwiczenia} \label{sec:cel}
+    \input{rozdzialy/1.Cel}
+% ------------
+\section{Podstawy teoretyczne}
+    \input{rozdzialy/2.Podstawy_Teoretyczne} \label{sec:podstawy}
+% ------------
+\section{Stanowisko pomiarowe}
+    \input{rozdzialy/3.stanowisko} \label{sec:stanowisko}
+% ------------
+\section{Przebieg ćwiczenia}
+    \input{rozdzialy/4.Przebieg_ćwiczenia} \label{sec:przebieg}
+% ------------
+\newpage
+\section{Wyniki} \label{sec:wyniki}
+    \input{rozdzialy/5.Wyniki}
+% ------------
+\section{Wnioski}
+    \input{rozdzialy/6.Wnioski} \label{sec:wnioski}
+%
+
+\end{document}

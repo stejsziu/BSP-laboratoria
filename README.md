@@ -5,7 +5,7 @@ nie psujcie (pls)
 ## obecne zadania (stan na lab2)
 - [x] zebrane dane
 - [x] policzone i zrobione wykresy
-- [ ] napisany raport
+- [x] napisany raport
 
 ### zadania przyszłe
 - [ ] odbyć lab3

@@ -2,7 +2,7 @@
 % DŁUGOSCI DO JEDNEGO WYKRESY
 
 \newlength{\singlePlotWidth}
-\setlength{\singlePlotWidth}{0.8\textwidth}
+\setlength{\singlePlotWidth}{1.05\textwidth}
 
 \newlength{\singleScreenshotWidth}
 \setlength{\singleScreenshotWidth}{0.8\textwidth}
@@ -10,32 +10,32 @@
 \newlength{\singlePhotoWidth}
 \setlength{\singlePhotoWidth}{0.6\textwidth}
 
-\newcommand{\newPlot}[3]{ 
+\newcommand{\newPlot}[3]{
         \begin{figure}[H]
         \centering
         \includegraphics[width = \singlePlotWidth]{wykresy/#1}
         \caption{#2}
         \label{fig:#3}
     \end{figure}
-} 
+}
 
-\newcommand{\newScreenshot}[3]{ 
+\newcommand{\newScreenshot}[3]{
         \begin{figure}[H]
         \centering
         \includegraphics[width = \singlePlotWidth]{screenshots/#1}
         \caption{#2}
         \label{fig:#3}
     \end{figure}
-} 
+}
 
-\newcommand{\newPhoto}[4]{ 
+\newcommand{\newPhoto}[4]{
         \begin{figure}[H]
         \centering
         \includegraphics[width = #2]{zdjecia/#1}
         \caption{#3}
         \label{fig:#4}
     \end{figure}
-} 
+}
 
 % #1 -> sciezka do obrazka
 % #2 -> caption text
