@@ -1,7 +1,7 @@
 clc; clear; close all;
-# UWAGA - kod w octave. Żeby działało w matlabie
-# trzeba zamienić dlmread w linijce 17 i zamienić na odpowiednie readmatrix
-# w przypadku dalszych bledow - powdzenia, chat i w drogę
+% UWAGA - kod w octave. Żeby działało w matlabie
+% trzeba zamienić dlmread w linijce 17 i zamienić na odpowiednie readmatrix
+% w przypadku dalszych bledow - powdzenia, chat i w drogę
 
 % ================= constants =================
 ro = 1.1975;            % air density [kg/m^3]

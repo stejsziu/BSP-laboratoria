@@ -1,2 +1,46 @@
-\label{sec:podstawy}
-\akapit x
+\section*{Zasada działania i kinematyka śmigła}
+
+Śmigło przekształca moc mechaniczną silnika na użyteczną moc napędu $N_S = T \cdot V$, wytwarzając osiową siłę ciągu $T$ (oznaczaną też $P_0$) wskutek odrzucania powietrza z przyrostem prędkości $\Delta v$. W strumieniu zaśmigłowym następuje zwężenie strugi (zasada zachowania masy) oraz spadek ciśnienia statycznego na rzecz dynamicznego (prawo Bernoulliego), a z zasady zachowania pędu wynika wzór na ciąg:
+\[
+T = P_0 = \rho \cdot Q \cdot \Delta v = \rho \cdot A \cdot V \cdot \Delta v
+\]
+gdzie $\rho$ to gęstość powietrza, $Q$ -- wydatek objętościowy przez tarczę śmigła o polu $A$, a $V$ -- prędkość napływu. Cechę śmigła tworzą wyrażane w calach średnica $D$ i skok geometryczny $S_{teor}$, a kierunek obrotu dla wielowirnikowców określa się patrząc od góry: CCW (w lotnictwie samolotowym prawe/ciągnące \textit{R}) oraz CW (w samolotowym lewe/pchające \textit{P}). Różnica skoku geometrycznego $S_{teor}$ i drogi przebytej w jednym obrocie (skoku rzeczywistego $S_{rz}$) stanowi poślizg: $P = S_{teor} - S_{rz}$.
+
+Łopata jest skręconą śrubowo powierzchnią nośną. Kąt zaklinowania przekroju $\beta = \varphi + \alpha$ (suma kąta linii śrubowej $\varphi$ i kąta natarcia $\alpha$) maleje wzdłuż promienia $r$, kompensując liniowy wzrost prędkości obwodowej
+\[
+v_r(r) = \omega \cdot r = 2\pi \cdot r \cdot n
+\]
+(na końcu łopaty $v_r(R) = \pi \cdot D \cdot n$ dla $n$ w [obr/s]) przy stałej prędkości postępowej $V$. Wypadkowa prędkość opływu profilu wynosi
+\[
+v_t = \sqrt{V^2 + v_r^2},
+\]
+a paraboloidalny wzrost ciśnienia dynamicznego $q = \tfrac{1}{2} \cdot \rho \cdot v_t^2$ oraz zwężenie końcówki łopaty sprawiają, że maksimum obciążenia i sprawności przypada na promień odniesienia $0{,}75R$ (gdzie dla śmigieł szybkoobrotowych liczba Reynoldsa mieści się w zakresie okołokrytycznym $\mathrm{Re} \approx 3{,}9\cdot 10^{4} \div 1{,}7\cdot 10^{5}$). Wypadkowa siła aerodynamiczna $P$ (suma siły nośnej $P_z$ i oporu $P_x$) dzieli się względem płaszczyzny obrotu na składową osiową $P_0$ (tworzącą ciąg $T$) i obwodową $P_m$ (generującą moment oporowy $M_{opor}$).
+
+\section*{Charakterystyki bezwymiarowe i bilans sprawności}
+
+Osiągi aerodynamiczne śmigła opisują bezwymiarowe współczynniki ciągu $C_T$ i momentu $C_N$ w funkcji współczynnika posuwu $\lambda$:
+\[
+\lambda = \frac{V}{\omega \cdot R} = \frac{V}{\pi \cdot n \cdot D}, \qquad
+C_T = \frac{T}{\rho \cdot n^2 \cdot D^4}, \qquad
+C_N = \frac{M_{opor}}{\rho \cdot n^3 \cdot D^5}
+\]
+(dla $n$ w [obr/min] licznik $\lambda$ mnoży się przez 60; w uproszczonym zapisie instrukcyjnym $C_N$ odnosi się też do $n^2$). Dla startu ($V = 0$, $\lambda = 0$) kąty natarcia $\alpha$, ciąg $T = T_{max}$ i moment oporowy są największe, lecz moc użyteczna i sprawność śmigła wynoszą zero ($\eta_s = 0$). Ze wzrostem prędkości $V$ kąty $\alpha$ oraz ciąg maleją, a sprawność rośnie do maksimum ($\eta_s = \eta_{max}$) przy optymalnym kącie natarcia $\alpha_{opt}$; dalszy wzrost $\lambda$ powoduje ujemne kąty $\alpha$, zmianę znaku ciągu na ujemny (hamowanie) i autorotację.
+
+W obliczeniach gęstość powietrza $\rho_a$ (z równania stanu gazu doskonałego) i prędkość strumienia $V$ (z ciśnienia dynamicznego $q$) wyznacza się ze wzorów:
+\[
+\rho_a = \frac{p_a}{R \cdot T_{temp}}, \qquad V = \sqrt{\frac{2 \cdot q}{\rho_a}}
+\]
+
+Relacje mocy elektrycznej $N_e = U_{zas} \cdot I_{zas}$, mechanicznej na wale $N_{mech} = M_{opor} \cdot \omega = 2\pi \cdot n \cdot M_{opor}$ i użytecznej $N_s = T \cdot V$ definiują sprawność silnika ze sterownikiem $\eta_m$, śmigła $\eta_s$ oraz całego zespołu napędowego $\eta_{zn}$:
+\[
+\eta_m = \frac{M_{opor} \cdot \omega}{U_{zas} \cdot I_{zas}}, \qquad
+\eta_s = \frac{T \cdot V}{M_{opor} \cdot \omega} = \frac{\lambda \cdot C_T}{2 \cdot C_N}, \qquad
+\eta_{zn} = \eta_m \cdot \eta_s = \frac{T \cdot V}{U_{zas} \cdot I_{zas}}
+\]
+
+Uzupełniająco określa się ciąg jednostkowy
+$\eta_t = \dfrac{T}{N_e}\ [\mathrm{g/W}]$
+oraz sprawność strumieniową dla prędkości zaśmigłowej $v$:
+\[
+\eta_{str} = \frac{\rho_a \cdot \pi \cdot D^2 \cdot v^3}{4 \cdot U_{zas} \cdot I_{zas}}
+\]
