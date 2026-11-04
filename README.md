@@ -6,3 +6,13 @@ nie psujcie (pls)
 - [x] zebrane dane
 - [x] policzone i zrobione wykresy
 - [x] napisany raport
+
+### zadania przyszłe
+- [ ] odbyć lab3
+- [ ] obliczenia i raport lab3
+- [ ] odbyć lab4
+- [ ] obliczenia i raport lab4
+- [ ] odbyć lab5
+- [ ] obliczenia i raport lab5
+- [ ] odbyć lab6
+- [ ] obliczenia i raport lab6
