@@ -1,0 +1,10 @@
+﻿Trajektoria,Badanie,Wariant,RMS_bledu_pozycji_m,Blad_koncowy_m
+1,serwo,prędkość serwa 10,3.320526,4.003174
+1,serwo,prędkość serwa 90,6.660008,6.942254
+1,luz,luz 1%,5.470384,5.483818
+1,luz,luz 10%,5.833771,5.669020
+1,opoz,opóźnienie 0,1 s,60.513402,123.547571
+1,opoz,opóźnienie 1 s,55.041697,113.493828
+1,szum,moc szumu 1,5.596932,5.614400
+1,szum,moc szumu 10,6.049819,5.841057
+1,czul,czułość AP = 10,8.777858,8.971440

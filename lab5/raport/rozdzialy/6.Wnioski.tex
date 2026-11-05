@@ -1,0 +1,17 @@
+\akapit Przeprowadzone symulacje numeryczne pozwalają na wyciągnięcie ogólnych wniosków dotyczących wrażliwości systemu sterowania bezzałogowego statku powietrznego na różnego rodzaju zakłócenia i ograniczenia sprzętowe. Analiza lotu swobodnego potwierdziła poprawność modelu oraz stabilność statyczną i dynamiczną płatowca w warunkach nominalnych. Wprowadzenie ograniczeń w układzie wykonawczym – takich jak skończona prędkość serwomechanizmów – uwidoczniło istotną zwłokę fazową w torze sterowania, co bezpośrednio skutkuje gorszym tłumieniem odchyłek i wzrostem błędu śledzenia trajektorii. Z kolei obecność luzów kinematycznych generuje strefę martwą, która uniemożliwia precyzyjną korektę położenia, prowadząc do charakterystycznego oscylacyjnego „pływania” modelu wokół zadanej ścieżki.
+
+\akapit Szczególnie krytycznym czynnikiem dla stabilności całego systemu okazały się opóźnienia transportowe w pętli sprzężenia zwrotnego. Nawet umiarkowane opóźnienie drastycznie obniża zapas stabilności regulatora, co prowadzi do gwałtownych, narastających oscylacji i uniemożliwia prawidłowe wykonanie misji. Z drugiej strony, dodanie szumów pomiarowych, choć wywołuje widoczną nerwowość w wysokoczęstotliwościowych sygnałach sterujących, nie wpływa drastycznie na globalny błąd pozycji ze względu na naturalne tłumienie aerodynamiczne i bezwładność płatowca. Ostatecznie stwierdzono, że zarówno zbyt mała, jak i nadmiernie duża czułość autopilota pogarsza jakość sterowania – odpowiednio przez ospałość układu lub jego nadpobudliwość skutkującą agresywną pracę sterów i zbędnym obciążeniem konstrukcji.
+
+\begin{tikzpicture}
+  \duck[
+    body=red!20!white,
+    bill=red!30!white,
+    shorthair=red!30!white,
+    bunny=red!30!white,
+    inear=red!30!white
+  ]
+  \path (0.1,0.1) rectangle (2.1,2.12);
+  \begin{pgfinterruptboundingbox}
+    \node[red!20!white,rotate=25,scale=3] at (1.7,1.51) {\textsf{s}};
+  \end{pgfinterruptboundingbox}
+\end{tikzpicture}

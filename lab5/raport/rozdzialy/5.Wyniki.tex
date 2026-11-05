@@ -1,0 +1,37 @@
+\akapit W niniejszej sekcji przedstawiono wybrane wyniki symulacji numerycznych dla poszczególnych wariantów badawczych bezzałogowego statku powietrznego. Dla przejrzystości raportu zestawiono kluczowe parametry w formie zwartych wykresów wielopanelowych, obejmujących trajektorię XY, wysokość, kąty orientacji przestrzennej oraz błąd położenia względem trajektorii referencyjnej.
+
+\akapit Analizę rozpoczęto od symulacji lotu swobodnego, co pozwala ocenić naturalną dynamikę i stabilność modelu bez ingerencji układu sterowania (rys. \ref{fig:lot_swobodny}).
+
+\newPlot{lot_swobodny_kompaktowy.pdf}{Charakterystyki lotu swobodnego samolotu}{lot_swobodny}
+
+\akapit Zgodnie z oczekiwaniami, jak pokazano na rysunku \ref{fig:lot_swobodny}, lot swobodny przebiega stabilnie, a model poprawnie utrzymuje zadane parametry lotu podłużnego i bocznego.
+
+\akapit Kolejna seria badań dotyczyła ograniczeń w układzie wykonawczym. Wprowadzono różne prędkości pracy serwomechanizmów (rys. \ref{fig:serwo}):
+
+\newPlot{traj1_serwo_kompaktowy.pdf}{Porównanie wpływu prędkości serwomechanizmów}{serwo}
+
+\akapit Obniżenie prędkości serw (wariant 10 na rys. \ref{fig:serwo}) powoduje zwłokę w reakcji na sygnały sterujące, co wydłuża czas tłumienia odchyłek i zwiększa błąd śledzenia ścieżki. Z kolei wyższa prędkość (90) zapewnia płynne i szybkie manewry.
+
+\akapit Następnie zbadano wpływ luzów kinematycznych w układzie sterowania, co zilustrowano na rysunku \ref{fig:luz}:
+
+\newPlot{traj1_luz_kompaktowy.pdf}{Wpływ luzów w układzie sterowania na trajektorię}{luz}
+
+\akapit Luzy widoczne w badaniu (rys. \ref{fig:luz}) wprowadzają strefę martwą, przez co stery nie reagują natychmiast na drobne korekty autopilota. Skutkuje to lekkim „pływaniem” modelu wokół zadanej trasy i wzrostem wskaźnika błędu położenia.
+
+\akapit Ważnym aspektem była również analiza opóźnień transportowych w pętli sprzężenia zwrotnego (rys. \ref{fig:opoz}):
+
+\newPlot{traj1_opoz_kompaktowy.pdf}{Wpływ opóźnień w pętli sterowania}{opoz}
+
+\akapit Opóźnienie rzędu 1 sekundy (zob. rys. \ref{fig:opoz}) drastycznie obniża zapas stabilności systemu sterowania. Autopilot reaguje z dużym opóźnieniem, co prowadzi do silnych oscylacji i poważnych odchyłek od trajektorii referencyjnej.
+
+\akapit Wpływ zakłóceń stochastycznych zweryfikowano poprzez dodanie szumów pomiarowych, których zestawienie zamieszczono na rysunku \ref{fig:szum}:
+
+\newPlot{traj1_szum_kompaktowy.pdf}{Wpływ szumów pomiarowych na zachowanie modelu}{szum}
+
+\akapit Szumy pomiarowe widoczne na rysunku \ref{fig:szum} generują widoczną nerwowość w sygnałach sterujących (szczególnie na lotkach i sterze wysokości). Dzięki bezwładności płatowca i filtracji sygnałowej wpływ ten na samą trajektorię i błąd położenia jest jednak stosunkowo niewielki.
+
+\akapit Na koniec sprawdzono wpływ współczynnika czułości (wzmocnienia) autopilota (rys. \ref{fig:czul}):
+
+\newPlot{traj1_czul_kompaktowy.pdf}{Wpływ zmiany czułości autopilota}{czul}
+
+\akapit Zbyt wysoka czułość regulatora (rys. \ref{fig:czul}) powoduje, że układ staje się nadpobudliwy. Stery wykonują gwałtowne, silne ruchy, co prowadzi do niepotrzebnego szarpania platformą i pogorszenia komfortu sterowania.

@@ -49,6 +49,8 @@
 \RequirePackage{pifont}
 \RequirePackage{xparse}
 %
+\RequirePackage{tikzducks}
+%
 % =========================================================================================
 % VISUAL SETTINGS (NUMBERING, EMPTY SPACES, ETC)
 %
@@ -159,7 +161,7 @@
 \DeclareOption{theme=dark}{\darkmodetrue} % Enable dark mode
 \DeclareOption{theme=light}{\darkmodefalse} % Enable light mode (default)
 \ProcessOptions\relax
-% 
+%
 \ifdarkmode % dark mode settings
     \pagecolor{black}   % Set background to black
     \color{white}       % Set text color to white

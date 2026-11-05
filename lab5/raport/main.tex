@@ -6,6 +6,7 @@
 \usepackage{placeins} % gives \FloatBarrier
 \usepackage{hyperref}
 \usepackage{booktabs}
+\usetikzlibrary{ducks}
 % Beamer presentation requires
 %\usepackage{colortbl}
 
@@ -34,7 +35,17 @@
 % ----------------------------------------
 %
     %SPIS TREŚCI
-\tableofcontents\hfill\vfill
+\tableofcontents
+\begin{tikzpicture}%
+  \duck[
+    grumpy,
+    lightsaber=red,
+    cape=black!85!white,
+    body=black!70!white,
+    darthvader=black!85!white
+  ]
+\end{tikzpicture}%
+\hfill\vfill
 % ----------------------------------------
 %
 %% ZALADOWANIE FUNKCJI!!!!
@@ -64,6 +75,7 @@
 \section{Wyniki} \label{sec:wyniki}
     \input{rozdzialy/5.Wyniki}
 % ------------
+\newpage
 \section{Wnioski}
     \input{rozdzialy/6.Wnioski} \label{sec:wnioski}
 %

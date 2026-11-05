@@ -1,0 +1,24 @@
+\akapit Przedmiotem niniejszego ćwiczenia laboratoryjnego jest analiza właściwości dynamicznych oraz jakości systemu sterowania bezzałogowego statku powietrznego (BSL) typu Cularis. Lot samolotu w przestrzeni trójwymiarowej opisywany jest za pomocą nieliniowych równań ruchu, do sformułowania których wykorzystuje się trzy powiązane układy współrzędnych[cite: 6, 7]:
+\begin{itemize}
+    \item \textbf{Inercyjny układ współrzędnych ($O_n x_n y_n z_n$)} – związany z Ziemią, służący do określania globalnej pozycji środka ciężkości obiektu[cite: 6].
+    \item \textbf{Grawitacyjny układ współrzędnych ($O_g x_g y_g z_g$)} – poruszający się wraz z obiektem, o osiach równoległych do układu inercyjnego[cite: 6].
+    \item \textbf{Układ współrzędnych obiektu ($O_b x_b y_b z_b$)} – związany ściśle z płatowcem (początek w środku ciężkości, oś $X$ wzdłuż kadłuba, $Y$ w prawo, $Z$ w dół), w którym rozpatrywane są prędkości oraz siły aerodynamiczne[cite: 6].
+\end{itemize}
+
+\akapit Stan kinematyczny i dynamiczny samolotu definiowany jest przez wektor zmiennych stanu, na który składają się składowe prędkości liniowej ($U, V, W$), prędkości kątowe ($P, Q, R$) oraz kąty orientacji przestrzennej: przechylenie ($\Phi$), pochylenie ($\Theta$) i odchylenie ($\Psi$)[cite: 7].
+
+\akapit  Struktura systemu sterowania i symulacji opiera się na zamkniętej pętli sprzężenia zwrotnego[cite: 7]. Obejmuje ona model dynamiki płatowca, model układu sterowania uwzględniający dynamikę serwomechanizmów, luzy kinematyczne oraz opóźnienia przesyłu sygnałów, a także model systemu pomiarowego wprowadzający zakłócenia stochastyczne (szumy)[cite: 8]. Zadaniem autopilota (AP) jest generowanie sygnałów sterujących (napęd, lotki, ster wysokości, ster kierunku) w taki sposób, aby statek powietrzny bezbłędnie realizował zadaną trajektorię lotu pomimo obecności niedoskonałości w torze sterowania i pomiaru.
+
+
+\begin{tikzpicture}
+\duck[
+  body=yellow!50!red!20!white,
+  recedinghair=gray!50!white,
+  eyebrow,
+  tshirt=white!93!black,
+  jacket=red!50!black,
+  glasses=brown!70!lightgray,
+  book=\scalebox{0.5}{\TeX},
+  bookcolour=black!20!brown
+  ]
+  \end{tikzpicture}
