@@ -17,3 +17,6 @@
 *.blg
 *.bcf
 *.run.xml
+
+# LaTeX main.pdf
+main.pdf
