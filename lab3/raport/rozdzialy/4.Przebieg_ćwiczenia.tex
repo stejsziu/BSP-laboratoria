@@ -1,1 +1,56 @@
-\akapit D
+\subsection{Skalowanie i analiza danych z giroskopów}
+
+\subsubsection{Metodyka pomiarowa}
+\akapit Kalibracja giroskopów polegała na wyznaczeniu napięcia spoczynkowego $U_{0}$ (gdy układ nie był w ruchu) oraz współczynnika skali $k$. Współczynnik ten wyznaczyliśmy metodą całkową, cztery razy wykonując obroty modułu o kąt $90^{\circ}$ wokół każdej z osi pomiarowych. Pozwoliło to na powiązanie pola pod wykresem napięcia z rzeczywistą zmianą kątową obiektu.
+
+\subsubsection{Analiza prędkości kątowych i orientacji}
+\akapit Podczas ruchu dowolnego zarejestrowaliśmy zmiany napięć odpowiadające prędkościom kątowym. Surowy przebieg tych danych, przed zastosowaniem filtracji i skalowania, widoczny jest poniżej.
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.85\textwidth]{zdjecia/giroskopy_gole-danensfw.pdf}
+%     \caption{Zapis surowych napięć wyjściowych z giroskopów dla ruchu w trzech płaszczyznach.}
+%     \label{fig:gyro_raw}
+% \end{figure}
+
+\akapit Głównym celem analizy było wyznaczenie orientacji obiektu (kątów Eulera: przechylenia $\Phi$, pochylenia $\Theta$ oraz odchylenia $\Psi$). W tym celu porównaliśmy dwa podejścia matematyczne. Pierwsze z nich oparte było na klasycznych równaniach kinematyki.
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.85\textwidth]{zdjecia/giroskopy_kinematyka.pdf}
+%     \caption{Orientacja obiektu wyznaczona poprzez całkowanie równań kinematyki.}
+%     \label{fig:kinematyka}
+% \end{figure}
+
+\akapit Drugą metodą był rachunek kwaternionowy, który pozwala na uniknięcie osobliwości matematycznych i zapewnia większą stabilność numeryczną przy złożonych obrotach.
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.85\textwidth]{zdjecia/giroskopy_kwaterniony.pdf}
+%     \caption{Orientacja obiektu obliczona przy użyciu algorytmu kwaternionowego.}
+%     \label{fig:kwaterniony}
+% \end{figure}
+
+\subsection{Skalowanie i analiza danych z przyspieszeniomierzy}
+
+\subsubsection{Opis wykonanych prac}
+\akapit W pierwszej części ćwiczenia skupiliśmy się na wyznaczeniu parametrów kalibracyjnych dla trzech osi akcelerometru w module IMU-ZAIOL-01. Wykorzystaliśmy do tego celu wypoziomowaną płytę traserską. Proces polegał na statycznym ustawianiu modułu w taki sposób, aby każda z jego osi była skierowana kolejno zgodnie i przeciwnie do wektora grawitacji. Dzięki temu mogliśmy zarejestrować napięcia odpowiadające przyspieszeniu $\pm 1g$. Na tej podstawie wyznaczyliśmy współczynniki nachylenia oraz przesunięcia, co pozwoliło na przeliczenie sygnału z $V$ na $m/s^2$.
+
+\subsubsection{Analiza wyników dla ruchu dowolnego}
+\akapit Po przeprowadzeniu kalibracji zarejestrowaliśmy ruch swobodny urządzenia w przestrzeni. Na poniższym wykresie przedstawiono surowe dane napięciowe zebrane bezpośrednio z przetwornika przed ich obróbką.
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.85\textwidth]{zdjecia/przyspieszenia_gole-danensfw.pdf}
+%     \caption{Surowe dane napięciowe zarejestrowane dla akcelerometrów podczas ruchu dowolnego.}
+%     \label{fig:acc_raw}
+% \end{figure}
+
+\akapit Następnie, wykorzystując wyznaczone wcześniej stałe kalibracyjne, przeliczyliśmy te sygnały na fizyczne wartości przyspieszenia. Wynik tego procesu prezentuje kolejny wykres, na którym widać dynamiczne zmiany przyspieszeń wzdłuż osi X, Y oraz Z.
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.85\textwidth]{zdjecia/przyspieszenia.pdf}
+%     \caption{Przetworzone dane z akcelerometrów wyrażone w $m/s^2$.}
+%     \label{fig:acc_processed}
+% \end{figure}
