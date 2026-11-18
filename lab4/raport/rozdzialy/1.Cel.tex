@@ -1,0 +1,23 @@
+\akapit Celem niniejszego ćwiczenia jest praktyczne zapoznanie się z zasadą działania bezwładnościowych czujników parametrów ruchu - przyspieszeniomierzy oraz giroskopów. Laboratorium koncentruje się na procesie kalibracji tych czujników oraz ich wykorzystaniu w systemach wyznaczania orientacji przestrzennej obiektu.
+
+\subsection {Wykorzystany sprzęt i oprogramowanie}
+\akapit W trakcie zajęć wykorzystano jednostkę pomiarową IMU-ZAIOL-01, zaprojektowaną w Zakładzie Automatyki i Osprzętu Lotniczego. W skład układu wchodzą:
+
+\begin{itemize}
+    \item Trzy giroskopy piezowibracyjne ENV-05F-03 firmy Muratta.
+    \item Trójosiowy przyspieszeniomierz ADXL-150-EM03 firmy Analog Devices.
+    \item Czujnik temperatury służący do kompensacji charakterystyk czujników.
+    \item Karta analogowo-cyfrowa próbkowana z częstotliwością 200 Hz.
+    \item Oprogramowanie "IMU\_rejestrator" stworzone w środowisku LabVIEW.
+\end{itemize}
+
+\subsection{Przebieg ćwiczenia}
+\akapit Realizacja ćwiczenia obejmowała trzy główne etapy:
+
+\begin{itemize}
+    \item Skalowanie przyspieszeniomierzy: Wyznaczenie liniowych charakterystyk $a_i = A_i U_i + B_i$ poprzez pomiar przyspieszenia ziemskiego w różnych położeniach na wypoziomowanej płycie traserskiej.
+    \item Skalowanie giroskopów: Wyznaczenie współczynników nachylenia charakterystyki $\omega_i = k_i (U_i - U_{0i})$ metodą obrotu o znany kąt.
+    \item Obliczenia nawigacyjne: Rejestracja danych podczas ruchu obiektu w trzech wymiarach i wyznaczenie kątów Eulera (przechylenia, pochylenia i odchylenia).
+\end{itemize}
+
+\akapit W sprawozdaniu przeanalizowano i porównano dwie metody wyznaczania orientacji: algorytm oparty na równaniach kinematycznych oraz algorytm wykorzystujący rachunek kwaternionowy.

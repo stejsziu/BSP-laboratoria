@@ -2,15 +2,15 @@
 
 nie psujcie (pls)
 
-## obecne zadania (stan na lab3)
+## obecne zadania (stan na lab4)
 - [x] zebrane dane
-- [x] policzone i zrobione wykresy (prawie)
-- [x] napisany raport
+- [ ] policzone i zrobione wykresy
+- [ ] napisany raport
 
 ### zadania przyszłe
 - [x] odbyć lab3
 - [x] obliczenia i raport lab3
-- [ ] odbyć lab4
+- [x] odbyć lab4
 - [ ] obliczenia i raport lab4
 - [x] odbyć lab5
 - [x] obliczenia i raport lab5
