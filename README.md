@@ -4,12 +4,12 @@ nie psujcie (pls)
 
 ## obecne zadania (stan na lab3)
 - [x] zebrane dane
-- [ ] policzone i zrobione wykresy (prawie)
-- [ ] napisany raport
+- [x] policzone i zrobione wykresy (prawie)
+- [x] napisany raport
 
 ### zadania przyszłe
 - [x] odbyć lab3
-- [ ] obliczenia i raport lab3
+- [x] obliczenia i raport lab3
 - [ ] odbyć lab4
 - [ ] obliczenia i raport lab4
 - [x] odbyć lab5
